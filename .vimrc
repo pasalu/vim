@@ -5,7 +5,10 @@ set nowrap "Don't wrap the text around when it doesn't fit the screen
 syntax on "Syntax coloring on
 
 set backspace=indent,eol,start "Allow backpacing over autoindent, line breaks, and at the start of indent
-set tabstop=4 "Number of spaces that a tab counts for
+set tabstop=4 "Number of spaces that a tab counts for visusally
+set softtabstop=4 "Number of spaces that are actually inserted.
+set shiftwidth=4 "Number of spaces used for autoindenting e.g. '>>' 
+set noexpandtab "Don't convert tabs to spaces
 
 set ruler "Line and column information at the bottom of a buffer
 
