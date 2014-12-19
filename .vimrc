@@ -17,7 +17,7 @@ colorscheme slate
 
 filetype plugin on
 
-autocmd filetype haskell set expandtab softtabstop=4 shiftwidth=4
+autocmd filetype haskell set expandtab
 
 set incsearch "Find items as i type
 set ignorecase "Be case insensitive
