@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 set autoindent "Copy indentation from the previous line 
 set smartindent "Indent after entering '{' and other special characters
 
@@ -15,7 +17,7 @@ set ruler "Line and column information at the bottom of a buffer
 set background=dark 
 colorscheme slate
 
-filetype plugin on
+filetype plugin indent on
 
 autocmd filetype haskell set expandtab
 
