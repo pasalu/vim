@@ -24,6 +24,8 @@ set incsearch "Find items as i type
 set ignorecase "Be case insensitive
 set smartcase "Assume upper and lower case characters unless upper case characters are used.
 
+let g:auto_save = 1 "Enable autosave on Vim startup
+
 " Set tabstop, softtabstop and shiftwidth to the same value
 " Taken from: http://vimcasts.org/episodes/tabs-and-spaces/
 command! -nargs=* Stab call Stab()
