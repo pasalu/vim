@@ -11,7 +11,7 @@ set tabstop=4 "Number of spaces that a tab counts for visusally
 set softtabstop=4 "Number of spaces that are actually inserted.
 set shiftwidth=4 "Number of spaces used for autoindenting e.g. '>>' 
 set expandtab "Convert tabs to spaces
-set guifont=Inconsolata:h11:cANSI
+set guifont=Consolas:h11:cANSI
 
 set ruler "Line and column information at the bottom of a buffer
 
