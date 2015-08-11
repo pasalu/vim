@@ -13,6 +13,11 @@ nnoremap <leader>_ ddkkp
 inoremap <leader><c-u> <esc>bveUe<esc>a
 nnoremap <leader><c-u> bvwU
 
+"Edit vimrc
+nnoremap <leader>ev :split $MYVIMRC<cr>
+"Source vimrc
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
 set autoindent "Copy indentation from the previous line 
 set smartindent "Indent after entering '{' and other special characters
 
