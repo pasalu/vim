@@ -1,5 +1,18 @@
 execute pathogen#infect()
 
+"Set global and local leader
+let mapleader = "-"
+let maplocalleader = "\\"
+
+"Move a line down
+nnoremap - ddp
+"Move a line up
+nnoremap _ ddkkp
+
+"Convert a word to uppercase
+inoremap <c-u> <esc>bveUe<esc>a
+nnoremap <c-u> bvwU
+
 set autoindent "Copy indentation from the previous line 
 set smartindent "Indent after entering '{' and other special characters
 
