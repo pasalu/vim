@@ -5,13 +5,13 @@ let mapleader = "-"
 let maplocalleader = "\\"
 
 "Move a line down
-nnoremap - ddp
+nnoremap <leader>- ddp
 "Move a line up
-nnoremap _ ddkkp
+nnoremap <leader>_ ddkkp
 
 "Convert a word to uppercase
-inoremap <c-u> <esc>bveUe<esc>a
-nnoremap <c-u> bvwU
+inoremap <leader><c-u> <esc>bveUe<esc>a
+nnoremap <leader><c-u> bvwU
 
 set autoindent "Copy indentation from the previous line 
 set smartindent "Indent after entering '{' and other special characters
