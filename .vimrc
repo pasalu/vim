@@ -26,6 +26,10 @@ iabbrev teh the
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
 
+"Force using jk to get back into normal mode.
+inoremap jk <esc>
+nnoremap <esc> <nop>
+
 set autoindent "Copy indentation from the previous line 
 set smartindent "Indent after entering '{' and other special characters
 
