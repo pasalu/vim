@@ -18,6 +18,14 @@ nnoremap <leader>ev :split $MYVIMRC<cr>
 "Source vimrc
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+"Automatically correct common spelling mistakes.
+iabbrev ssig Peter Salu (psalua@gmail.com)
+iabbrev teh the
+
+"Surround with quotes.
+nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
+
 set autoindent "Copy indentation from the previous line 
 set smartindent "Indent after entering '{' and other special characters
 
