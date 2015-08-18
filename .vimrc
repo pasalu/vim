@@ -30,6 +30,15 @@ vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
 inoremap jk <esc>
 nnoremap <esc> <nop>
 
+"Set tabstop, shiftwidth, and softtabstop to 2.
+autocmd FileType elm :set tabstop=2 shiftwidth=2 softtabstop=2
+
+"Comments commands
+autocmd FileType elm nnoremap <localleader>c I--<esc>
+autocmd FileType haskell nnoremap <localleader>c I--<esc>
+autocmd FileType python nnoremap <localleader>c I#<esc>
+autocmd FileType java nnoremap <localleader>c I//<esc>
+
 set autoindent "Copy indentation from the previous line 
 set smartindent "Indent after entering '{' and other special characters
 
