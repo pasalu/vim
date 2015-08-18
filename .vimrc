@@ -28,7 +28,7 @@ vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
 
 "Force using jk to get back into normal mode.
 inoremap jk <esc>
-nnoremap <esc> <nop>
+inoremap <esc> <nop>
 
 "Set tabstop, shiftwidth, and softtabstop to 2.
 autocmd FileType elm :set tabstop=2 shiftwidth=2 softtabstop=2
