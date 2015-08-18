@@ -31,17 +31,26 @@ inoremap jk <esc>
 inoremap <esc> <nop>
 
 "Set tabstop, shiftwidth, and softtabstop to 2.
-autocmd FileType elm :set tabstop=2 shiftwidth=2 softtabstop=2
+augroup elm
+    autocmd!
+    autocmd FileType elm :set tabstop=2 shiftwidth=2 softtabstop=2
+augroup END
 
 "Comments commands
-autocmd FileType elm nnoremap <localleader>c I--<esc>
-autocmd FileType haskell nnoremap <localleader>c I--<esc>
-autocmd FileType python nnoremap <localleader>c I#<esc>
-autocmd FileType java nnoremap <localleader>c I//<esc>
+augroup comments
+    autocmd!
+    autocmd FileType elm nnoremap <localleader>c I--<esc>
+    autocmd FileType haskell nnoremap <localleader>c I--<esc>
+    autocmd FileType python nnoremap <localleader>c I#<esc>
+    autocmd FileType java nnoremap <localleader>c I//<esc>
+augroup END
 
 "Snippets
-autocmd FileType python iabbrev <buffer> iff if:<left>
-autocmd FileType elm iabbrev <buffer> iff if then<left><left><left><left>
+augroup snippets
+    autocmd!
+    autocmd FileType python iabbrev <buffer> iff if:<left>
+    autocmd FileType elm iabbrev <buffer> iff if then<left><left><left><left>
+augroup END
 
 set autoindent "Copy indentation from the previous line 
 set smartindent "Indent after entering '{' and other special characters
