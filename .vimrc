@@ -39,6 +39,10 @@ autocmd FileType haskell nnoremap <localleader>c I--<esc>
 autocmd FileType python nnoremap <localleader>c I#<esc>
 autocmd FileType java nnoremap <localleader>c I//<esc>
 
+"Snippets
+autocmd FileType python iabbrev <buffer> iff if:<left>
+autocmd FileType elm iabbrev <buffer> iff if then<left><left><left><left>
+
 set autoindent "Copy indentation from the previous line 
 set smartindent "Indent after entering '{' and other special characters
 
