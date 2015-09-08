@@ -52,6 +52,13 @@ augroup snippets
     autocmd FileType elm iabbrev <buffer> iff if then<left><left><left><left>
 augroup END
 
+"Operator pending mapping for around next/last parentheses.
+onoremap in( :<c-u>normal! f(vi(<cr>
+onoremap il( :<c-u>normal! F)vi(<cr>
+"Operator pending mapping for around next/last curly brackets.
+onoremap in{ :<c-u>normal! f{vi{<cr>
+onoremap il{ :<c-u>normal! F{vi{<cr>
+
 set autoindent "Copy indentation from the previous line 
 set smartindent "Indent after entering '{' and other special characters
 
