@@ -71,6 +71,7 @@ set softtabstop=4 "Number of spaces that are actually inserted.
 set shiftwidth=4 "Number of spaces used for autoindenting e.g. '>>' 
 set expandtab "Convert tabs to spaces
 set guifont=Consolas:h11:cANSI
+set guioptions-=r "Remove right-hand scroll bar.
 
 set ruler "Line and column information at the bottom of a buffer
 
