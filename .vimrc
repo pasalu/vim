@@ -18,7 +18,7 @@ nnoremap <leader>ev :split $MYVIMRC<cr>
 "Source vimrc
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-"Automatically correct common spelling mistakes.
+"Abbreviations for signature and automatically correct common spelling mistakes.
 iabbrev ssig Peter Salu (psalua@gmail.com)
 iabbrev teh the
 
@@ -45,7 +45,7 @@ augroup comments
     autocmd FileType java nnoremap <localleader>c I//<esc>
 augroup END
 
-"Snippets
+"Snippets for if statements
 augroup snippets
     autocmd!
     autocmd FileType python iabbrev <buffer> iff if:<left>
