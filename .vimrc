@@ -30,6 +30,31 @@ vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
 inoremap jk <esc>
 inoremap <esc> <nop>
 
+set autoindent "Copy indentation from the previous line 
+set smartindent "Indent after entering '{' and other special characters
+
+set nowrap "Don't wrap the text around when it doesn't fit the screen
+syntax on "Syntax coloring on
+
+set backspace=indent,eol,start "Allow backpacing over autoindent, line breaks, and at the start of indent
+set tabstop=4 "Number of spaces that a tab counts for visusally
+set softtabstop=4 "Number of spaces that are actually inserted.
+set shiftwidth=4 "Number of spaces used for autoindenting e.g. '>>' 
+set expandtab "Convert tabs to spaces
+set guifont=Consolas:h11:cANSI
+set guioptions-=r "Remove right-hand scroll bar.
+
+set ruler "Line and column information at the bottom of a buffer
+
+set background=dark 
+colorscheme kolor
+
+filetype plugin indent on
+
+set incsearch "Find items as i type
+set ignorecase "Be case insensitive
+set smartcase "Assume upper and lower case characters unless upper case characters are used.
+
 "Set tabstop, shiftwidth, and softtabstop to 2.
 augroup elm
     autocmd!
@@ -65,32 +90,6 @@ onoremap il( :<c-u>normal! F)vi(<cr>
 "Operator pending mapping for around next/last curly brackets.
 onoremap in{ :<c-u>normal! f{vi{<cr>
 onoremap il{ :<c-u>normal! F{vi{<cr>
-
-set autoindent "Copy indentation from the previous line 
-set smartindent "Indent after entering '{' and other special characters
-
-set nowrap "Don't wrap the text around when it doesn't fit the screen
-syntax on "Syntax coloring on
-
-set backspace=indent,eol,start "Allow backpacing over autoindent, line breaks, and at the start of indent
-set tabstop=4 "Number of spaces that a tab counts for visusally
-set softtabstop=4 "Number of spaces that are actually inserted.
-set shiftwidth=4 "Number of spaces used for autoindenting e.g. '>>' 
-set expandtab "Convert tabs to spaces
-set guifont=Consolas:h11:cANSI
-set guioptions-=r "Remove right-hand scroll bar.
-
-set ruler "Line and column information at the bottom of a buffer
-
-set background=dark 
-colorscheme kolor
-
-filetype plugin indent on
-
-set incsearch "Find items as i type
-set ignorecase "Be case insensitive
-set smartcase "Assume upper and lower case characters unless upper case characters are used.
-
 let g:auto_save = 1 "Enable autosave on Vim startup
 
 " Set tabstop, softtabstop and shiftwidth to the same value
