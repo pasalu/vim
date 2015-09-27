@@ -52,6 +52,13 @@ augroup snippets
     autocmd FileType elm iabbrev <buffer> iff if then<left><left><left><left>
 augroup END
 
+"Vimscript file settings ------------------{{{
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+"}}}
+
 "Operator pending mapping for around next/last parentheses.
 onoremap in( :<c-u>normal! f(vi(<cr>
 onoremap il( :<c-u>normal! F)vi(<cr>
