@@ -30,6 +30,9 @@ vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
 inoremap jk <esc>
 inoremap <esc> <nop>
 
+"Show trailing whitespace.
+set list
+
 set autoindent "Copy indentation from the previous line 
 set smartindent "Indent after entering '{' and other special characters
 
@@ -46,7 +49,7 @@ set guioptions-=r "Remove right-hand scroll bar.
 
 set ruler "Line and column information at the bottom of a buffer
 
-set background=dark 
+set background=dark
 colorscheme kolor
 
 filetype plugin indent on
@@ -54,6 +57,9 @@ filetype plugin indent on
 set incsearch "Find items as i type
 set ignorecase "Be case insensitive
 set smartcase "Assume upper and lower case characters unless upper case characters are used.
+
+"Set the working directory to be the same as the current file.
+autocmd BufEnter * silent! lcd %:p:h
 
 "Set tabstop, shiftwidth, and softtabstop to 2.
 augroup elm
@@ -90,7 +96,9 @@ onoremap il( :<c-u>normal! F)vi(<cr>
 "Operator pending mapping for around next/last curly brackets.
 onoremap in{ :<c-u>normal! f{vi{<cr>
 onoremap il{ :<c-u>normal! F{vi{<cr>
-let g:auto_save = 1 "Enable autosave on Vim startup
+
+"Enable autosave on Vim startup
+let g:auto_save = 1
 
 " Set tabstop, softtabstop and shiftwidth to the same value
 " Taken from: http://vimcasts.org/episodes/tabs-and-spaces/
