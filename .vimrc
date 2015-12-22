@@ -33,30 +33,44 @@ inoremap <esc> <nop>
 "Show trailing whitespace.
 set list
 
-set autoindent "Copy indentation from the previous line 
-set smartindent "Indent after entering '{' and other special characters
+"Copy indentation from the previous line
+set autoindent
+"Indent after entering '{' and other special characters
+set smartindent
 
-set nowrap "Don't wrap the text around when it doesn't fit the screen
-syntax on "Syntax coloring on
+"Don't wrap the text around when it doesn't fit the screen
+set nowrap
+"Syntax coloring on
+syntax on
 
-set backspace=indent,eol,start "Allow backpacing over autoindent, line breaks, and at the start of indent
-set tabstop=4 "Number of spaces that a tab counts for visusally
-set softtabstop=4 "Number of spaces that are actually inserted.
-set shiftwidth=4 "Number of spaces used for autoindenting e.g. '>>' 
-set expandtab "Convert tabs to spaces
+"Allow backpacing over autoindent, line breaks, and at the start of indent
+set backspace=indent,eol,start
+"Number of spaces that a tab counts for visusally
+set tabstop=4
+"Number of spaces that are actually inserted.
+set softtabstop=4
+"Number of spaces used for autoindenting e.g. '>>' 
+set shiftwidth=4
+"Convert tabs to spaces
+set expandtab
 set guifont=Consolas:h11:cANSI
-set guioptions-=r "Remove right-hand scroll bar.
+"Remove right-hand scroll bar.
+set guioptions-=r
 
-set ruler "Line and column information at the bottom of a buffer
+"Line and column information at the bottom of a buffer
+set ruler
 
 set background=dark
 colorscheme kolor
 
 filetype plugin indent on
 
-set incsearch "Find items as i type
-set ignorecase "Be case insensitive
-set smartcase "Assume upper and lower case characters unless upper case characters are used.
+"Find items as i type
+set incsearch
+"Be case insensitive
+set ignorecase
+"Assume upper and lower case characters unless upper case characters are used.
+set smartcase
 
 "Set the working directory to be the same as the current file.
 autocmd BufEnter * silent! lcd %:p:h
