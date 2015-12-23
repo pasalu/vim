@@ -1,5 +1,8 @@
 execute pathogen#infect()
 
+"Enable autosave on Vim startup
+let g:auto_save = 1
+
 "Set global and local leader
 let mapleader = "-"
 let maplocalleader = "\\"
@@ -13,6 +16,17 @@ nnoremap <leader>_ ddkkp
 inoremap <leader><c-u> <esc>bveUe<esc>a
 nnoremap <leader><c-u> bvwU
 
+"Surround with quotes.
+nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
+
+"Operator pending mapping for around next/last parentheses.
+onoremap in( :<c-u>normal! f(vi(<cr>
+onoremap il( :<c-u>normal! F)vi(<cr>
+"Operator pending mapping for around next/last curly brackets.
+onoremap in{ :<c-u>normal! f{vi{<cr>
+onoremap il{ :<c-u>normal! F{vi{<cr>
+
 "Edit vimrc
 nnoremap <leader>ev :split $MYVIMRC<cr>
 "Source vimrc
@@ -22,16 +36,9 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 iabbrev ssig Peter Salu (psalua@gmail.com)
 iabbrev teh the
 
-"Surround with quotes.
-nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
-vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
-
 "Force using jk to get back into normal mode.
 inoremap jk <esc>
 inoremap <esc> <nop>
-
-"Show trailing whitespace.
-set list
 
 "Copy indentation from the previous line
 set autoindent
@@ -49,10 +56,13 @@ set backspace=indent,eol,start
 set tabstop=4
 "Number of spaces that are actually inserted.
 set softtabstop=4
-"Number of spaces used for autoindenting e.g. '>>' 
+"Number of spaces used for autoindenting e.g. '>>'
 set shiftwidth=4
 "Convert tabs to spaces
 set expandtab
+"Show trailing whitespace.
+set list
+
 set guifont=Consolas:h11:cANSI
 "Remove right-hand scroll bar.
 set guioptions-=r
@@ -103,16 +113,6 @@ augroup filetype_vim
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
 "}}}
-
-"Operator pending mapping for around next/last parentheses.
-onoremap in( :<c-u>normal! f(vi(<cr>
-onoremap il( :<c-u>normal! F)vi(<cr>
-"Operator pending mapping for around next/last curly brackets.
-onoremap in{ :<c-u>normal! f{vi{<cr>
-onoremap il{ :<c-u>normal! F{vi{<cr>
-
-"Enable autosave on Vim startup
-let g:auto_save = 1
 
 " Set tabstop, softtabstop and shiftwidth to the same value
 " Taken from: http://vimcasts.org/episodes/tabs-and-spaces/
