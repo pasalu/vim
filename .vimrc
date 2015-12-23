@@ -32,10 +32,6 @@ nnoremap <leader>ev :split $MYVIMRC<cr>
 "Source vimrc
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-"Abbreviations for signature and automatically correct common spelling mistakes.
-iabbrev ssig Peter Salu (psalua@gmail.com)
-iabbrev teh the
-
 "Force using jk to get back into normal mode.
 inoremap jk <esc>
 inoremap <esc> <nop>
