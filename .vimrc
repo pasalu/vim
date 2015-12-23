@@ -1,12 +1,19 @@
+"Plugin settings -----------{{{
+"Use Pathogen to manage plugins
 execute pathogen#infect()
 
 "Enable autosave on Vim startup
 let g:auto_save = 1
 
+"Load filetype specific indentation.
+filetype plugin indent on
+
 "Set global and local leader
 let mapleader = "-"
 let maplocalleader = "\\"
+"}}}
 
+"Editing settings ---------------------{{{
 "Move a line down
 nnoremap <leader>- ddp
 "Move a line up
@@ -26,12 +33,16 @@ onoremap il( :<c-u>normal! F)vi(<cr>
 "Operator pending mapping for around next/last curly brackets.
 onoremap in{ :<c-u>normal! f{vi{<cr>
 onoremap il{ :<c-u>normal! F{vi{<cr>
+"}}}
 
+".vimrc settings --------------{{{
 "Edit vimrc
 nnoremap <leader>ev :split $MYVIMRC<cr>
 "Source vimrc
 nnoremap <leader>sv :source $MYVIMRC<cr>
+"}}}
 
+"Basic settings ----------------{{{
 "Force using jk to get back into normal mode.
 inoremap jk <esc>
 inoremap <esc> <nop>
@@ -43,8 +54,6 @@ set smartindent
 
 "Don't wrap the text around when it doesn't fit the screen
 set nowrap
-"Syntax coloring on
-syntax on
 
 "Allow backpacing over autoindent, line breaks, and at the start of indent
 set backspace=indent,eol,start
@@ -59,18 +68,6 @@ set expandtab
 "Show trailing whitespace.
 set list
 
-set guifont=Consolas:h11:cANSI
-"Remove right-hand scroll bar.
-set guioptions-=r
-
-"Line and column information at the bottom of a buffer
-set ruler
-
-set background=dark
-colorscheme kolor
-
-filetype plugin indent on
-
 "Find items as i type
 set incsearch
 "Be case insensitive
@@ -80,7 +77,24 @@ set smartcase
 
 "Set the working directory to be the same as the current file.
 autocmd BufEnter * silent! lcd %:p:h
+"}}}
 
+"Appearance settings -------------------{{{
+set guifont=Consolas:h11:cANSI
+"Remove right-hand scroll bar.
+set guioptions-=r
+
+"Syntax coloring on
+syntax on
+
+"Line and column information at the bottom of a buffer
+set ruler
+
+set background=dark
+colorscheme kolor
+"}}}
+
+"Filetype specific settings ------------{{{
 "Set tabstop, shiftwidth, and softtabstop to 2.
 augroup elm
     autocmd!
@@ -103,15 +117,14 @@ augroup snippets
     autocmd FileType elm iabbrev <buffer> iff if then<left><left><left><left>
 augroup END
 
-"Vimscript file settings ------------------{{{
 augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
 "}}}
 
-" Set tabstop, softtabstop and shiftwidth to the same value
-" Taken from: http://vimcasts.org/episodes/tabs-and-spaces/
+"Set tabstop, softtabstop and shiftwidth to the same value {{{
+"Taken from: http://vimcasts.org/episodes/tabs-and-spaces/
 command! -nargs=* Stab call Stab()
 function! Stab()
 	let l:tabstop = 1 * input('set tabstop = softtabstop = shiftwidth = ')
@@ -138,3 +151,4 @@ function! SummarizeTabs()
 		echohl None
 	endtry
 endfunction
+"}}}
