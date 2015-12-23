@@ -77,6 +77,9 @@ set smartcase
 
 "Set the working directory to be the same as the current file.
 autocmd BufEnter * silent! lcd %:p:h
+
+"Start editing a file with all folds closed.
+set foldlevelstart=0
 "}}}
 
 "Appearance settings -------------------{{{
