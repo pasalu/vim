@@ -1,4 +1,20 @@
 "Plugin settings -----------{{{
+"Don't be compatible with vi.
+set nocompatible
+
+"Don't detect the type of file automatically.
+filetype off
+
+"Set the runtime path to include Vundle and initialize.
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+"Let Vudle manage Vundle, required.
+Plugin 'VundleVim/Vundle.vim'
+
+"Keep Plugin commands between vundle#begin/end.
+call vundle#end()
+
 "Use Pathogen to manage plugins
 execute pathogen#infect()
 
