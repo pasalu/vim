@@ -12,6 +12,9 @@ call vundle#begin()
 "Let Vudle manage Vundle, required.
 Plugin 'VundleVim/Vundle.vim'
 
+"Install colorscheme kolor.
+Plugin 'kolor'
+
 "Keep Plugin commands between vundle#begin/end.
 call vundle#end()
 
