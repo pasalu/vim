@@ -62,9 +62,8 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 "}}}
 
 "Basic settings ----------------{{{
-"Force using jk to get back into normal mode.
+"Use jk to get back into normal mode.
 inoremap jk <esc>
-inoremap <esc> <nop>
 
 "Copy indentation from the previous line
 set autoindent
