@@ -83,8 +83,10 @@ set softtabstop=4
 set shiftwidth=4
 "Convert tabs to spaces
 set expandtab
-"Show trailing whitespace.
+"Show tabs and trailing whitespace. Also show arrows when text can't fit on
+"the screen horizontally.
 set list
+set listchars=tab:»·,trail:·,precedes:<,extends:>
 
 "Find items as i type
 set incsearch
