@@ -100,6 +100,9 @@ autocmd BufEnter * silent! lcd %:p:h
 
 "Start editing a file with all folds closed.
 set foldlevelstart=0
+
+"Turn on spell checking.
+set spell
 "}}}
 
 "Appearance settings -------------------{{{
