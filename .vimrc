@@ -103,6 +103,9 @@ set foldlevelstart=0
 
 "Turn on spell checking.
 set spell
+
+"Always show the status line (ruler, filename, etc.)
+set laststatus=2
 "}}}
 
 "Appearance settings -------------------{{{
