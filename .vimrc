@@ -106,6 +106,11 @@ set spell
 
 "Always show the status line (ruler, filename, etc.)
 set laststatus=2
+
+"Wrap lines after 79 characters.
+set textwidth=79
+"Wrap lines in insert mode.
+set formatoptions-=l
 "}}}
 
 "Appearance settings -------------------{{{
