@@ -13,7 +13,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 "Install colorscheme kolor.
-Plugin 'kolor'
+Plugin 'solarized'
 
 "Keep Plugin commands between vundle#begin/end.
 call vundle#end()
@@ -125,7 +125,7 @@ syntax on
 set ruler
 
 set background=dark
-colorscheme kolor
+colorscheme solarized
 "}}}
 
 "Filetype specific settings ------------{{{
