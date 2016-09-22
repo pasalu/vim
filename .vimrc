@@ -111,6 +111,9 @@ set laststatus=2
 set textwidth=79
 "Wrap lines in insert mode.
 set formatoptions-=l
+
+"List files in a tree format
+let g:netrw_liststyle=3
 "}}}
 
 "Appearance settings -------------------{{{
