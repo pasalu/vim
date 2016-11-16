@@ -114,6 +114,9 @@ set formatoptions-=l
 
 "List files in a tree format
 let g:netrw_liststyle=3
+
+"Turn off the bell.
+set belloff=all
 "}}}
 
 "Appearance settings -------------------{{{
