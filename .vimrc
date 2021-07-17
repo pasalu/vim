@@ -18,9 +18,6 @@ Plugin 'solarized'
 "Keep Plugin commands between vundle#begin/end.
 call vundle#end()
 
-"Use Pathogen to manage plugins
-execute pathogen#infect()
-
 "Enable autosave on Vim startup
 let g:auto_save = 1
 
